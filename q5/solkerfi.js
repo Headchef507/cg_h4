@@ -101,13 +101,15 @@ window.onload = function init()
                 distanceFromEarh -=0.1;
                 break;
             case 38:	// upp ör
-                speedOfEarth +=0.1;
+                speedOfEarth +=0.05;
                 break;
             case 39:	// hægri ör
                 distanceFromEarh +=0.1;
                 break;
             case 40:	// niður ör
-                speedOfEarth -=0.1;
+                if(speedOfEarth > 0.0){
+                    speedOfEarth -=0.05;
+                }
                 break;
             default:
                 xmove = 0.0;
